@@ -1,0 +1,47 @@
+{
+  "name": "HOME INTERACTIVE MAP",
+  "version": "0.1",
+  "slug": "homeinteractivemap",
+  "description": "An SVG map that interact with homeassistant_api via javascript websocket",
+  "url": "https://github.com/cllorens/HomePlan",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "initialize",
+  "panel_icon": "mdi:home",
+  "panel_title": "Home Map",
+  "panel_admin": false,
+  "boot": "auto",
+  "hassio_api": true,
+  "homeassistant_api": true,
+  "ingress": true,
+  "map": [ "share:rw" ],
+  "services": [ "mqtt:need" ],
+  "options": {
+	"MQTT_Server": {
+		"host": "172.17.0.1",
+		"user": "mqtt",
+		"pass": "Mqtt2020",
+		"port": 1883,
+		"topic": "irrigation/esclavas"
+	},
+	"config": {
+		"NumSchedules": 10,
+		"clear": false
+	},
+	"debug" : false
+  },
+  "schema": {
+	"MQTT_Server": {
+		"host": "str",
+		"user": "str",
+		"pass": "str",
+		"port": "int",
+		"topic": "str"
+	},
+	"config": {
+		"NumSchedules": "int",
+		"clear": "int"
+	},
+	"debug" : "bool"
+  },
+  "webui": "http://[HOST]:[PORT:8199]"
+}
