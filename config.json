@@ -1,6 +1,6 @@
 {
   "name": "HOME INTERACTIVE MAP",
-  "version": "0.15",
+  "version": "0.2",
   "slug": "homeinteractivemap",
   "description": "An SVG map that interact with homeassistant_api via javascript websocket",
   "url": "https://github.com/cllorens/HomePlan",
