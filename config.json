@@ -1,11 +1,11 @@
 {
   "name": "HOME INTERACTIVE MAP",
-  "version": "0.25",
+  "version": "0.3",
   "slug": "homeinteractivemap",
   "description": "An SVG map that interact with homeassistant_api via javascript websocket",
   "url": "https://github.com/cllorens/HomePlan",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
-  "startup": "system",
+  "startup": "application ",
   "panel_icon": "mdi:home",
   "panel_title": "Home Map",
   "panel_admin": false,
