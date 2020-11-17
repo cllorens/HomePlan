@@ -3,7 +3,7 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
-RUN apk update
+RUN apk update\
 	&& apk add --no-cache apache2 php7-apache2
 		
 # Copy data for add-on
