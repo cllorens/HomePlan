@@ -3,8 +3,18 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
-RUN apk add --no-cache apache2 php7-apache2
-		
+# Upgrade existing packages in the base image
+RUN apk --no-cache upgrade
+
+# Install apache from packages with out caching install files
+RUN apk add --no-cache apache2
+
+# Creat directory for apache2 to store PID file
+RUN mkdir /run/apache2
+	
+# Open port for httpd access
+EXPOSE 80
+	
 # Copy data for add-on
 COPY run.sh /
 RUN chmod a+x /run.sh
