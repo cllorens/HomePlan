@@ -8,9 +8,6 @@ RUN apk --no-cache upgrade
 
 # Install apache from packages with out caching install files
 RUN apk add --no-cache apache2
-
-# Creat directory for apache2 to store PID file
-RUN mkdir /run/apache2
 	
 # Open port for httpd access
 EXPOSE 80
