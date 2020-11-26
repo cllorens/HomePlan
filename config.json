@@ -43,5 +43,5 @@
 	},
 	"debug" : "bool"
   },
-  "webui": "http://[HOST]:[PORT:8199]"
+  "webui": "http://[HOST]:[PORT:80]"
 }
