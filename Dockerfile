@@ -8,6 +8,9 @@ RUN apk --no-cache upgrade
 
 # Install apache from packages with out caching install files
 RUN apk add --no-cache apache2
+
+# Modify apache2 port
+RUN sed -i '/Listen 80/c\Listen 8199' /etc/apache2/httpd.conf
 	
 # Open port for httpd access
 EXPOSE 8199
