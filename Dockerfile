@@ -10,7 +10,7 @@ RUN apk --no-cache upgrade
 RUN apk add --no-cache apache2
 	
 # Open port for httpd access
-EXPOSE 8190
+EXPOSE 8199
 	
 # Copy data for add-on
 COPY run.sh /
