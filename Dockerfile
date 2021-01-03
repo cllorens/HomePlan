@@ -10,7 +10,7 @@ RUN apk --no-cache upgrade
 RUN apk add --no-cache apache2
 
 # Modify apache2 port
-RUN sed -i '/Listen 80/c\Listen 172.30.32.2:8099' /etc/apache2/httpd.conf
+RUN sed -i '/Listen 80/c\Listen 8099' /etc/apache2/httpd.conf
 	
 # Open port for httpd access
 EXPOSE 8099
