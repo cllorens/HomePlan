@@ -16,6 +16,7 @@ RUN sed -i '/Listen 80/c\Listen 8099' /etc/apache2/httpd.conf
 EXPOSE 8099
 	
 # Copy data for add-on
+COPY /web /var/www/localhost/htdocs
 COPY run.sh /
 RUN chmod a+x /run.sh
 
