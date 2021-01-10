@@ -1,0 +1,60 @@
+
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Assistant auth demo</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        Home Assistant auth demo
+      </h1>
+    </header>
+
+    <main>
+      <div id="ask-connect" style="display: none">
+        <p>
+          This requires a <a href="https://www.home-assistant.io" target="_blank">Home Assistant</a> installation (0.77 or later).
+        </p>          
+        
+        <form id="connect">          
+          <input id="host" value="http://hassio.local:8123" />
+          <button>
+            Connect to Home Assistant
+          </button>
+        </form>  
+      </div>
+      <table>
+        <tbody>
+
+        </tbody>
+      </table>
+    </main>
+
+    <footer>
+      <a href="https://glitch.com/~hass-auth-demo">
+        Remix this in Glitch
+      </a>
+    </footer>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="haws.umd.js"></script>
+    <script src="client.js"></script>
+
+  </body>
+</html>
